@@ -1,58 +1,314 @@
 [
-  { "section": "Bright & Citrus-Driven", "name": "Margarita", "ingredients": "2 oz blanco tequila • 1 oz lime juice • 1 oz Cointreau" },
-  { "section": "Bright & Citrus-Driven", "name": "Batanga", "ingredients": "2 oz blanco tequila • juice of ½ lime • top with Mexican Coca-Cola" },
-  { "section": "Bright & Citrus-Driven", "name": "Mexican Firing Squad", "ingredients": "2 oz blanco tequila • ¾ oz lime juice • ¾ oz grenadine • 2–4 dashes Angostura" },
-  { "section": "Bright & Citrus-Driven", "name": "Lion’s Tail", "ingredients": "2 oz bourbon • ½ oz allspice dram • ½ oz lime • ¼ oz demerara syrup • 2 dashes Angostura" },
-  { "section": "Bright & Citrus-Driven", "name": "Shanghai Gin", "ingredients": "¾ oz gin • ¾ oz yellow Chartreuse • ¾ oz Bénédictine • ¾ oz lemon juice" },
-  { "section": "Bright & Citrus-Driven", "name": "Tequila Daisy", "ingredients": "1½ oz blanco tequila • ½ oz Cointreau • ½ oz lemon juice • ¼ oz grenadine • soda water" },
-  { "section": "Bright & Citrus-Driven", "name": "Gold Rush", "ingredients": "2 oz bourbon • ¾ oz lemon juice • ¾ oz honey syrup" },
-
-  { "section": "Elegant & Aromatic", "name": "Gin Martini", "ingredients": "2 oz gin • ½ oz dry vermouth • orange bitters • lemon twist" },
-  { "section": "Elegant & Aromatic", "name": "L’Alaska", "ingredients": "1½ oz gin • ½ oz yellow Chartreuse • ¾ oz monk’s tisane" },
-  { "section": "Elegant & Aromatic", "name": "Bijou", "ingredients": "1 oz gin • 1 oz green Chartreuse • 1 oz sweet vermouth • 1 dash orange bitters" },
-  { "section": "Elegant & Aromatic", "name": "Pegu Club", "ingredients": "2 oz gin • ¾ oz Cointreau • ¾ oz lime juice • 2 dashes Angostura bitters" },
-  { "section": "Elegant & Aromatic", "name": "Espresso Martini", "ingredients": "2 oz vodka • ½ oz coffee liqueur • 1 oz espresso • ½ oz simple syrup" },
-  { "section": "Elegant & Aromatic", "name": "Tequila Espresso Martini", "ingredients": "1½ oz añejo tequila • ½ oz tequila coffee liqueur • 1 oz espresso • ½ oz simple syrup • cinnamon" },
-
-  { "section": "Smooth & Spirit-Forward", "name": "Old Fashioned", "ingredients": "2 oz bourbon or rye • ½ oz demerara syrup • 2 dashes Angostura • 2 dashes orange bitters" },
-  { "section": "Smooth & Spirit-Forward", "name": "Tequila Old Fashioned", "ingredients": "2 oz añejo tequila • ½ oz demerara syrup • 2 dashes orange bitters • cinnamon" },
-  { "section": "Smooth & Spirit-Forward", "name": "Manhattan", "ingredients": "2 oz rye • 1 oz sweet vermouth • 2 dashes Angostura" },
-  { "section": "Smooth & Spirit-Forward", "name": "Sazerac", "ingredients": "2 oz rye • ½ oz demerara syrup • 2 dashes Peychaud’s • absinthe rinse" },
-  { "section": "Smooth & Spirit-Forward", "name": "Vieux Carré", "ingredients": "1 oz rye • 1 oz cognac • 1 oz sweet vermouth • ¼ oz Bénédictine • Angostura + Peychaud’s" },
-  { "section": "Smooth & Spirit-Forward", "name": "Bobby Burns", "ingredients": "2 oz High West Campfire • ¾ oz sweet vermouth • 1 dash orange bitters • 1 dash absinthe" },
-  { "section": "Smooth & Spirit-Forward", "name": "Black Manhattan", "ingredients": "2 oz rye • 1 oz Averna • dash Angostura • dash orange bitters" },
-  { "section": "Smooth & Spirit-Forward", "name": "Toronto", "ingredients": "2 oz rye • ¼ oz Fernet • ½ oz maple syrup • 2 dashes Angostura" },
-
-  { "section": "Bold & Bitter", "name": "Classic Negroni", "ingredients": "1 oz gin • 1 oz Campari • 1 oz sweet vermouth" },
-  { "section": "Bold & Bitter", "name": "White Negroni", "ingredients": "1 oz gin • 1 oz blanc vermouth • 1 oz Cocchi Americano" },
-  { "section": "Bold & Bitter", "name": "Aperol Negroni", "ingredients": "1 oz gin • 1 oz Aperol • 1 oz blanc vermouth" },
-  { "section": "Bold & Bitter", "name": "Boulevardier", "ingredients": "1 oz bourbon • 1 oz Campari • 1 oz sweet vermouth" },
-  { "section": "Bold & Bitter", "name": "Kingston Negroni", "ingredients": "1 oz Jamaican rum • 1 oz Campari • 1 oz sweet vermouth" },
-  { "section": "Bold & Bitter", "name": "Rum & Roast Negroni", "ingredients": "1 oz aged rum • 1 oz Campari • 1 oz sweet vermouth • ¼ oz coffee liqueur" },
-  { "section": "Bold & Bitter", "name": "Enzo", "ingredients": "¾ oz Fernet • ¾ oz Campari • 1½ oz sweet vermouth • soda" },
-
-  { "section": "Tropical & Escapist", "name": "Pineapple Daiquiri", "ingredients": "2 oz pineapple rum • 1 oz acid-adjusted pineapple juice • ¾ oz demerara syrup • cinnamon" },
-  { "section": "Tropical & Escapist", "name": "Pineapple Coconut Daiquiri", "ingredients": "1 oz pineapple rum • 1 oz coconut rum • 1 oz acid-adjusted pineapple juice • ¾ oz demerara syrup • cinnamon" },
-  { "section": "Tropical & Escapist", "name": "Jungle Bird", "ingredients": "1½ oz dark rum • ¾ oz Campari • ½ oz lime • ½ oz demerara syrup • 1½ oz pineapple juice" },
-  { "section": "Tropical & Escapist", "name": "Royal Bermuda Yacht Club", "ingredients": "2 oz gold rum • ¾ oz lime • ¼ oz Cointreau • ½ oz falernum • ¼ oz simple syrup" },
-  { "section": "Tropical & Escapist", "name": "Planter’s Punch", "ingredients": "3 oz dark rum • ¾ oz lime • ½ oz grenadine • ½ oz demerara syrup • 3 dashes Angostura • splash club soda" },
-  { "section": "Tropical & Escapist", "name": "Mai Tai", "ingredients": "2 oz rum • ¾ oz lime • ¾ oz orange liqueur • ½ oz orgeat" },
-  { "section": "Tropical & Escapist", "name": "Corn ’n’ Oil", "ingredients": "2 oz aged rum • ½ oz lime • ½ oz falernum • 3 dashes Angostura" },
-  { "section": "Tropical & Escapist", "name": "Poison Dart", "ingredients": "2 oz bourbon • ½ oz lemon juice • ¼ oz Cynar • ¼ oz cinnamon syrup • 1 dash orange bitters • dash pimento dram" },
-  { "section": "Tropical & Escapist", "name": "Nuclear Daiquiri", "ingredients": "1 oz overproof rum • ¾ oz green Chartreuse • 1 oz lime • ¼ oz falernum" },
-  { "section": "Tropical & Escapist", "name": "Shrunken Skull", "ingredients": "1 oz demerara rum • 1 oz gold rum • 1 oz grenadine • 1 oz lime juice" },
-
-  { "section": "Deep Cuts & Bartender Picks", "name": "Jägerita", "ingredients": "2 oz Jägermeister • 1 oz Cointreau • 1 oz lime juice • ½ oz simple syrup" },
-  { "section": "Deep Cuts & Bartender Picks", "name": "Iron Ranger", "ingredients": "2 oz bourbon • ¾ oz lemon • 1 oz pineapple • ½ oz falernum • ½ oz simple syrup • 2 dashes bitters" },
-  { "section": "Deep Cuts & Bartender Picks", "name": "Garden Martini", "ingredients": "1 oz olive oil fat washed gin • 1 oz basil infused gin • ½ oz dry vermouth • orange bitters" },
-  { "section": "Deep Cuts & Bartender Picks", "name": "ThaiTini", "ingredients": "1 oz aged rum • 1 oz vodka • 2 oz thai tea • ½ oz demerara syrup" },
-  { "section": "Deep Cuts & Bartender Picks", "name": "Industry Sour", "ingredients": "¾ oz green Chartreuse • ¾ oz Fernet-Branca • ¾ oz lime juice • ¾ oz simple syrup" },
-  { "section": "Deep Cuts & Bartender Picks", "name": "1919", "ingredients": "1 oz rye • 1 oz Jamaican rum • ¾ oz sweet vermouth • ¼ oz Bénédictine" },
-  { "section": "Deep Cuts & Bartender Picks", "name": "Midnight Stroll", "ingredients": "1½ oz rye • ¾ oz Campari • ½ oz Amaro Ramazzotti • ¼ oz dry curaçao • 1 dash Peychaud’s" },
-  { "section": "Deep Cuts & Bartender Picks", "name": "Peanut Butter Old Fashioned", "ingredients": "2 oz peanut butter bourbon • ½ oz demerara syrup • 2 dashes chocolate bitters • cinnamon" },
-
-  { "section": "Spritzes", "name": "Aperol Spritz", "ingredients": "2 oz Aperol • 3 oz Prosecco • 1 oz soda" },
-  { "section": "Spritzes", "name": "Campari Spritz", "ingredients": "2 oz Campari • 3 oz Prosecco • 1 oz soda" },
-  { "section": "Spritzes", "name": "Cynar Spritz", "ingredients": "2 oz Cynar • 3 oz Prosecco • 1 oz soda" },
-  { "section": "Spritzes", "name": "Select Spritz", "ingredients": "2 oz Select • 3 oz Prosecco • 1 oz soda" }
+  {
+    "section": "Bright & Citrus-Driven",
+    "name": "Margarita",
+    "ingredients": "2 oz blanco tequila • 1 oz lime juice • 1 oz Cointreau",
+    "spirit": "Tequila"
+  },
+  {
+    "section": "Bright & Citrus-Driven",
+    "name": "Batanga",
+    "ingredients": "2 oz blanco tequila • juice of ½ lime • top with Mexican Coca-Cola",
+    "spirit": "Tequila"
+  },
+  {
+    "section": "Bright & Citrus-Driven",
+    "name": "Mexican Firing Squad",
+    "ingredients": "2 oz blanco tequila • ¾ oz lime juice • ¾ oz grenadine • 2–4 dashes Angostura",
+    "spirit": "Tequila"
+  },
+  {
+    "section": "Bright & Citrus-Driven",
+    "name": "Lion’s Tail",
+    "ingredients": "2 oz bourbon • ½ oz allspice dram • ½ oz lime • ¼ oz demerara syrup • 2 dashes Angostura",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Bright & Citrus-Driven",
+    "name": "Shanghai Gin",
+    "ingredients": "¾ oz gin • ¾ oz yellow Chartreuse • ¾ oz Bénédictine • ¾ oz lemon juice",
+    "spirit": "Gin"
+  },
+  {
+    "section": "Bright & Citrus-Driven",
+    "name": "Tequila Daisy",
+    "ingredients": "1½ oz blanco tequila • ½ oz Cointreau • ½ oz lemon juice • ¼ oz grenadine • soda water",
+    "spirit": "Tequila"
+  },
+  {
+    "section": "Bright & Citrus-Driven",
+    "name": "Gold Rush",
+    "ingredients": "2 oz bourbon • ¾ oz lemon juice • ¾ oz honey syrup",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Elegant & Aromatic",
+    "name": "Gin Martini",
+    "ingredients": "2 oz gin • ½ oz dry vermouth • orange bitters • lemon twist",
+    "spirit": "Gin"
+  },
+  {
+    "section": "Elegant & Aromatic",
+    "name": "L’Alaska",
+    "ingredients": "1½ oz gin • ½ oz yellow Chartreuse • ¾ oz monk’s tisane",
+    "spirit": "Gin"
+  },
+  {
+    "section": "Elegant & Aromatic",
+    "name": "Bijou",
+    "ingredients": "1 oz gin • 1 oz green Chartreuse • 1 oz sweet vermouth • 1 dash orange bitters",
+    "spirit": "Gin"
+  },
+  {
+    "section": "Elegant & Aromatic",
+    "name": "Pegu Club",
+    "ingredients": "2 oz gin • ¾ oz Cointreau • ¾ oz lime juice • 2 dashes Angostura bitters",
+    "spirit": "Gin"
+  },
+  {
+    "section": "Elegant & Aromatic",
+    "name": "Espresso Martini",
+    "ingredients": "2 oz vodka • ½ oz coffee liqueur • 1 oz espresso • ½ oz simple syrup",
+    "spirit": "Vodka"
+  },
+  {
+    "section": "Elegant & Aromatic",
+    "name": "Tequila Espresso Martini",
+    "ingredients": "1½ oz añjo tequila • ½ oz tequila coffee liqueur • 1 oz espresso • ½ oz simple syrup • cinnamon",
+    "spirit": "Tequila"
+  },
+  {
+    "section": "Smooth & Spirit-Forward",
+    "name": "Old Fashioned",
+    "ingredients": "2 oz bourbon or rye • ½ oz demerara syrup • 2 dashes Angostura • 2 dashes orange bitters",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Smooth & Spirit-Forward",
+    "name": "Tequila Old Fashioned",
+    "ingredients": "2 oz añjo tequila • ½ oz demerara syrup • 2 dashes orange bitters • cinnamon",
+    "spirit": "Tequila"
+  },
+  {
+    "section": "Smooth & Spirit-Forward",
+    "name": "Manhattan",
+    "ingredients": "2 oz rye • 1 oz sweet vermouth • 2 dashes Angostura",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Smooth & Spirit-Forward",
+    "name": "Sazerac",
+    "ingredients": "2 oz rye • ½ oz demerara syrup • 2 dashes Peychaud’s • absinthe rinse",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Smooth & Spirit-Forward",
+    "name": "Vieux Carré",
+    "ingredients": "1 oz rye • 1 oz cognac • 1 oz sweet vermouth • ¼ oz Bénédictine • Angostura + Peychaud’s",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Smooth & Spirit-Forward",
+    "name": "Bobby Burns",
+    "ingredients": "2 oz High West Campfire • ¾ oz sweet vermouth • 1 dash orange bitters • 1 dash absinthe",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Smooth & Spirit-Forward",
+    "name": "Black Manhattan",
+    "ingredients": "2 oz rye • 1 oz Averna • dash Angostura • dash orange bitters",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Smooth & Spirit-Forward",
+    "name": "Toronto",
+    "ingredients": "2 oz rye • ¼ oz Fernet • ½ oz maple syrup • 2 dashes Angostura",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Bold & Bitter",
+    "name": "Classic Negroni",
+    "ingredients": "1 oz gin • 1 oz Campari • 1 oz sweet vermouth",
+    "spirit": "Gin"
+  },
+  {
+    "section": "Bold & Bitter",
+    "name": "White Negroni",
+    "ingredients": "1 oz gin • 1 oz blanc vermouth • 1 oz Cocchi Americano",
+    "spirit": "Gin"
+  },
+  {
+    "section": "Bold & Bitter",
+    "name": "Aperol Negroni",
+    "ingredients": "1 oz gin • 1 oz Aperol • 1 oz blanc vermouth",
+    "spirit": "Gin"
+  },
+  {
+    "section": "Bold & Bitter",
+    "name": "Boulevardier",
+    "ingredients": "1 oz bourbon • 1 oz Campari • 1 oz sweet vermouth",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Bold & Bitter",
+    "name": "Kingston Negroni",
+    "ingredients": "1 oz Jamaican rum • 1 oz Campari • 1 oz sweet vermouth",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Bold & Bitter",
+    "name": "Rum & Roast Negroni",
+    "ingredients": "1 oz aged rum • 1 oz Campari • 1 oz sweet vermouth • ¼ oz coffee liqueur",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Bold & Bitter",
+    "name": "Enzo",
+    "ingredients": "¾ oz Fernet • ¾ oz Campari • 1½ oz sweet vermouth • soda",
+    "spirit": "Amaro"
+  },
+  {
+    "section": "Tropical & Escapist",
+    "name": "Pineapple Daiquiri",
+    "ingredients": "2 oz pineapple rum • 1 oz acid-adjusted pineapple juice • ¾ oz demerara syrup • cinnamon",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Tropical & Escapist",
+    "name": "Pineapple Coconut Daiquiri",
+    "ingredients": "1 oz pineapple rum • 1 oz coconut rum • 1 oz acid-adjusted pineapple juice • ¾ oz demerara syrup • cinnamon",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Tropical & Escapist",
+    "name": "Jungle Bird",
+    "ingredients": "1½ oz dark rum • ¾ oz Campari • ½ oz lime • ½ oz demerara syrup • 1½ oz pineapple juice",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Tropical & Escapist",
+    "name": "Royal Bermuda Yacht Club",
+    "ingredients": "2 oz gold rum • ¾ oz lime • ¼ oz Cointreau • ½ oz falernum • ¼ oz simple syrup",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Tropical & Escapist",
+    "name": "Planter’s Punch",
+    "ingredients": "3 oz dark rum • ¾ oz lime • ½ oz grenadine • ½ oz demerara syrup • 3 dashes Angostura • splash club soda",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Tropical & Escapist",
+    "name": "Mai Tai",
+    "ingredients": "2 oz rum • ¾ oz lime • ¾ oz orange liqueur • ½ oz orgeat",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Tropical & Escapist",
+    "name": "Corn ’n’ Oil",
+    "ingredients": "2 oz aged rum • ½ oz lime • ½ oz falernum • 3 dashes Angostura",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Tropical & Escapist",
+    "name": "Poison Dart",
+    "ingredients": "2 oz bourbon • ½ oz lemon juice • ¼ oz Cynar • ¼ oz cinnamon syrup • 1 dash orange bitters • dash pimento dram",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Tropical & Escapist",
+    "name": "Nuclear Daiquiri",
+    "ingredients": "1 oz overproof rum • ¾ oz green Chartreuse • 1 oz lime • ¼ oz falernum",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Tropical & Escapist",
+    "name": "Shrunken Skull",
+    "ingredients": "1 oz demerara rum • 1 oz gold rum • 1 oz grenadine • 1 oz lime juice",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Tropical & Escapist",
+    "name": "Sweet Liberty’s Piña Colada",
+    "ingredients": "1½ oz rum blend • 1 oz pineapple juice • 3 oz coco mix • 2 whole coffee beans • 1 pineapple chunk • ¼ oz Pedro Ximénez sherry",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Deep Cuts & Bartender Picks",
+    "name": "Jägerita",
+    "ingredients": "2 oz Jägermeister • 1 oz Cointreau • 1 oz lime juice • ½ oz simple syrup",
+    "spirit": "Liqueur"
+  },
+  {
+    "section": "Deep Cuts & Bartender Picks",
+    "name": "Iron Ranger",
+    "ingredients": "2 oz bourbon • ¾ oz lemon • 1 oz pineapple • ½ oz falernum • ½ oz simple syrup • 2 dashes bitters",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Deep Cuts & Bartender Picks",
+    "name": "Garden Martini",
+    "ingredients": "1 oz olive oil fat washed gin • 1 oz basil infused gin • ½ oz dry vermouth • orange bitters",
+    "spirit": "Gin"
+  },
+  {
+    "section": "Deep Cuts & Bartender Picks",
+    "name": "ThaiTini",
+    "ingredients": "1 oz aged rum • 1 oz vodka • 2 oz thai tea • ½ oz demerara syrup",
+    "spirit": "Rum"
+  },
+  {
+    "section": "Deep Cuts & Bartender Picks",
+    "name": "Angostura Sour",
+    "ingredients": "1½ oz Angostura Aromatic Bitters • 1 oz Lime juice • ½ simple syrup",
+    "spirit": "Other"
+  },
+  {
+    "section": "Deep Cuts & Bartender Picks",
+    "name": "1919",
+    "ingredients": "1 oz rye • 1 oz Jamaican rum • ¾ oz sweet vermouth • ¼ oz Bénédictine",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Deep Cuts & Bartender Picks",
+    "name": "Midnight Stroll",
+    "ingredients": "1½ oz rye • ¾ oz Campari • ½ oz Amaro Ramazzotti • ¼ oz dry curaçao • 1 dash Peychaud’s",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Deep Cuts & Bartender Picks",
+    "name": "Peanut Butter Old Fashioned",
+    "ingredients": "2 oz peanut butter bourbon • ½ oz demerara syrup • 2 dashes chocolate bitters • cinnamon",
+    "spirit": "Whiskey"
+  },
+  {
+    "section": "Deep Cuts & Bartender Picks",
+    "name": "Jungle Hunt",
+    "ingredients": "1 oz Jägermeister • 1/2 oz pineapple rum • 1/2 oz falernum liqueur • 1/3 oz cinnamon syrup • 1 1/3 oz pineapple juice • 2/3 oz lemon juice • 2 dashes Angostura orange bitters",
+    "spirit": "Liqueur"
+  },
+  {
+    "section": "Spritzes",
+    "name": "Aperol Spritz",
+    "ingredients": "2 oz Aperol • 3 oz Prosecco • 1 oz soda",
+    "spirit": "Aperitif"
+  },
+  {
+    "section": "Spritzes",
+    "name": "Campari Spritz",
+    "ingredients": "2 oz Campari • 3 oz Prosecco • 1 oz soda",
+    "spirit": "Aperitif"
+  },
+  {
+    "section": "Spritzes",
+    "name": "Cynar Spritz",
+    "ingredients": "2 oz Cynar • 3 oz Prosecco • 1 oz soda",
+    "spirit": "Aperitif"
+  },
+  {
+    "section": "Spritzes",
+    "name": "Select Spritz",
+    "ingredients": "2 oz Select • 3 oz Prosecco • 1 oz soda",
+    "spirit": "Aperitif"
+  }
 ]

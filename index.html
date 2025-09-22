@@ -1,105 +1,119 @@
-<!doctype html>
-<html lang="en" data-reduce-motion="auto" data-font="system">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wes’s Cocktail Menu</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wes’s Cocktail Menu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- Optional, highly-readable font (no-FOIT). Comment out if you want system fonts only. -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <h1 class="hero__title">Wes’s Cocktail Menu</h1>
 
-    <link rel="stylesheet" href="./styles.css" />
-    <script defer src="./app.js"></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Section jump chips -->
+    <nav class="hero__jump">
+      <a class="chip" href="#bright">Bright &amp; Citrus-Driven</a>
+      <a class="chip" href="#aromatic">Elegant &amp; Aromatic</a>
+      <a class="chip" href="#spirit">Smooth &amp; Spirit-Forward</a>
+      <a class="chip" href="#bitter">Bold &amp; Bitter</a>
+      <a class="chip" href="#tropical">Tropical &amp; Escapist</a>
+      <a class="chip" href="#deep">Deep Cuts &amp; Bartender Picks</a>
+      <a class="chip" href="#spritzes">Spritzes</a>
+    </nav>
 
-    <main id="main" tabindex="-1">
-      <!-- Hero -->
-      <section id="hero" class="hero section">
-        <div class="wrap">
-          <h1 class="hero__title">Wes’s Cocktail Menu</h1>
-     
+    <!-- Spirit Filter -->
+    <div class="hero__filter-row">
+      <label for="spirit-filter" class="filter-label">Filter by Spirit:</label>
+      <select id="spirit-filter" class="filter-select"></select>
+    </div>
+  </div>
+</header>
 
-          <div class="hero__jump">
-            <a class="chip" href="#bright">Bright</a>
-            <a class="chip" href="#aromatic">Aromatic</a>
-            <a class="chip" href="#spirit">Spirit-Forward</a>
-            <a class="chip" href="#bitter">Bitter</a>
-            <a class="chip" href="#tropical">Tropical</a>
-            <a class="chip" href="#deep">Deep Cuts</a>
-            <a class="chip" href="#spritzes">Spritzes</a>
-          </div>
-        </div>
-      </section>
 
-      <!-- Data-driven sections -->
-      <section id="bright" class="section theme-bright" aria-labelledby="bright-h">
-        <div class="wrap">
-          <h2 id="bright-h" class="section__title">Bright & Citrus-Driven</h2>
-          <p class="section__tag">Zingy, high-acid, sunshine-in-a-glass.</p>
-          <ul class="cards" data-section="Bright & Citrus-Driven"></ul>
-        </div>
-      </section>
-
-      <section id="aromatic" class="section theme-aromatic" aria-labelledby="aromatic-h">
-        <div class="wrap">
-          <h2 id="aromatic-h" class="section__title">Elegant & Aromatic</h2>
-          <p class="section__tag">Refined profiles, floral & herbal lift.</p>
-          <ul class="cards" data-section="Elegant & Aromatic"></ul>
-        </div>
-      </section>
-
-      <section id="spirit" class="section theme-spirit" aria-labelledby="spirit-h">
-        <div class="wrap">
-          <h2 id="spirit-h" class="section__title">Smooth & Spirit-Forward</h2>
-          <p class="section__tag">Classics built on backbone and balance.</p>
-          <ul class="cards" data-section="Smooth & Spirit-Forward"></ul>
-        </div>
-      </section>
-
-      <section id="bitter" class="section theme-bitter" aria-labelledby="bitter-h">
-        <div class="wrap">
-          <h2 id="bitter-h" class="section__title">Bold & Bitter</h2>
-          <p class="section__tag">Negroni country. Citrus peels & bite.</p>
-          <ul class="cards" data-section="Bold & Bitter"></ul>
-        </div>
-      </section>
-
-      <section id="tropical" class="section theme-tropical" aria-labelledby="tropical-h">
-        <div class="wrap">
-          <h2 id="tropical-h" class="section__title">Tropical & Escapist</h2>
-          <p class="section__tag">Rums, spice, and vacation energy.</p>
-          <ul class="cards" data-section="Tropical & Escapist"></ul>
-        </div>
-      </section>
-
-      <section id="deep" class="section theme-deep" aria-labelledby="deep-h">
-        <div class="wrap">
-          <h2 id="deep-h" class="section__title">Deep Cuts & Bartender Picks</h2>
-          <p class="section__tag">Off-menu gems & house faves.</p>
-          <ul class="cards" data-section="Deep Cuts & Bartender Picks"></ul>
-        </div>
-      </section>
-
-      <section id="spritzes" class="section theme-spritzes" aria-labelledby="spritzes-h">
-        <div class="wrap">
-          <h2 id="spritzes-h" class="section__title">Spritzes</h2>
-          <p class="section__tag">Low lift. High delight.</p>
-          <ul class="cards" data-section="Spritzes"></ul>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer" role="contentinfo">
+  <main id="main">
+    <!-- Bright -->
+    <section id="bright" class="section theme-bright">
       <div class="wrap">
-        <small>
-          
-        </small>
-        <small>© <span id="year"></span> Wes Spangler</small>
+        <h2 class="section__title">Bright &amp; Citrus-Driven</h2>
+        <p class="section__tag">Lively, refreshing, and zesty</p>
+        <ul class="cards" data-section="Bright &amp; Citrus-Driven"></ul>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <!-- Aromatic -->
+    <section id="aromatic" class="section theme-aromatic">
+      <div class="wrap">
+        <h2 class="section__title">Elegant &amp; Aromatic</h2>
+        <p class="section__tag">Perfumed, refined, and balanced</p>
+        <ul class="cards" data-section="Elegant &amp; Aromatic"></ul>
+      </div>
+    </section>
+
+    <!-- Spirit-Forward -->
+    <section id="spirit" class="section theme-spirit">
+      <div class="wrap">
+        <h2 class="section__title">Smooth &amp; Spirit-Forward</h2>
+        <p class="section__tag">Bold, strong, and classic</p>
+        <ul class="cards" data-section="Smooth &amp; Spirit-Forward"></ul>
+      </div>
+    </section>
+
+    <!-- Bitter -->
+    <section id="bitter" class="section theme-bitter">
+      <div class="wrap">
+        <h2 class="section__title">Bold &amp; Bitter</h2>
+        <p class="section__tag">Complex, assertive, and bittersweet</p>
+        <ul class="cards" data-section="Bold &amp; Bitter"></ul>
+      </div>
+    </section>
+
+    <!-- Tropical -->
+    <section id="tropical" class="section theme-tropical">
+      <div class="wrap">
+        <h2 class="section__title">Tropical &amp; Escapist</h2>
+        <p class="section__tag">Exotic, fruity, and fun</p>
+        <ul class="cards" data-section="Tropical &amp; Escapist"></ul>
+      </div>
+    </section>
+
+    <!-- Deep Cuts -->
+    <section id="deep" class="section theme-deep">
+      <div class="wrap">
+        <h2 class="section__title">Deep Cuts &amp; Bartender Picks</h2>
+        <p class="section__tag">Creative, daring, and offbeat</p>
+        <ul class="cards" data-section="Deep Cuts &amp; Bartender Picks"></ul>
+      </div>
+    </section>
+
+    <!-- Spritzes -->
+    <section id="spritzes" class="section theme-spritzes">
+      <div class="wrap">
+        <h2 class="section__title">Spritzes</h2>
+        <p class="section__tag">Light, bubbly, and refreshing</p>
+        <ul class="cards" data-section="Spritzes"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Surprise me CTA -->
+  <div class="surprise-wrap">
+    <div class="wrap">
+      <button id="surprise-btn" class="surprise-btn" type="button">
+        🎲 Surprise me
+      </button>
+    </div>
+  </div>
+
+
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Wes Spangler</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
 </html>
