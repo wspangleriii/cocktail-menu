@@ -1,133 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wes’s Cocktail Menu</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- REQUIRED: Netlify Identity Widget -->
+  <title>Cocktail Menu Manager</title>
+  <!-- Identity Widget for login -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to content</a>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="wrap">
-      <h1 class="hero__title">Wes’s Cocktail Menu</h1>
-
-      <!-- Section jump chips -->
-      <nav class="hero__jump">
-        <a class="chip" href="#bright">Bright &amp; Citrus-Driven</a>
-        <a class="chip" href="#aromatic">Elegant &amp; Aromatic</a>
-        <a class="chip" href="#spirit">Smooth &amp; Spirit-Forward</a>
-        <a class="chip" href="#bitter">Bold &amp; Bitter</a>
-        <a class="chip" href="#tropical">Tropical &amp; Escapist</a>
-        <a class="chip" href="#deep">Deep Cuts &amp; Bartender Picks</a>
-        <a class="chip" href="#spritzes">Spritzes</a>
-      </nav>
-
-      <!-- Spirit Filter -->
-      <div class="hero__filter-row">
-        <label for="spirit-filter" class="filter-label">Filter by Spirit:</label>
-        <select id="spirit-filter" class="filter-select">
-          <!-- Options populated by JS -->
-        </select>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- Bright -->
-    <section id="bright" class="section theme-bright">
-      <div class="wrap">
-        <h2 class="section__title">Bright &amp; Citrus-Driven</h2>
-        <p class="section__tag">Lively, refreshing, and zesty</p>
-        <ul class="cards" data-section="Bright &amp; Citrus-Driven"></ul>
-      </div>
-    </section>
-
-    <!-- Aromatic -->
-    <section id="aromatic" class="section theme-aromatic">
-      <div class="wrap">
-        <h2 class="section__title">Elegant &amp; Aromatic</h2>
-        <p class="section__tag">Perfumed, refined, and balanced</p>
-        <ul class="cards" data-section="Elegant &amp; Aromatic"></ul>
-      </div>
-    </section>
-
-    <!-- Spirit-Forward -->
-    <section id="spirit" class="section theme-spirit">
-      <div class="wrap">
-        <h2 class="section__title">Smooth &amp; Spirit-Forward</h2>
-        <p class="section__tag">Bold, strong, and classic</p>
-        <ul class="cards" data-section="Smooth &amp; Spirit-Forward"></ul>
-      </div>
-    </section>
-
-    <!-- Bitter -->
-    <section id="bitter" class="section theme-bitter">
-      <div class="wrap">
-        <h2 class="section__title">Bold &amp; Bitter</h2>
-        <p class="section__tag">Complex, assertive, and bittersweet</p>
-        <ul class="cards" data-section="Bold &amp; Bitter"></ul>
-      </div>
-    </section>
-
-    <!-- Tropical -->
-    <section id="tropical" class="section theme-tropical">
-      <div class="wrap">
-        <h2 class="section__title">Tropical &amp; Escapist</h2>
-        <p class="section__tag">Exotic, fruity, and fun</p>
-        <ul class="cards" data-section="Tropical &amp; Escapist"></ul>
-      </div>
-    </section>
-
-    <!-- Deep Cuts -->
-    <section id="deep" class="section theme-deep">
-      <div class="wrap">
-        <h2 class="section__title">Deep Cuts &amp; Bartender Picks</h2>
-        <p class="section__tag">Creative, daring, and offbeat</p>
-        <ul class="cards" data-section="Deep Cuts &amp; Bartender Picks"></ul>
-      </div>
-    </section>
-
-    <!-- Spritzes -->
-    <section id="spritzes" class="section theme-spritzes">
-      <div class="wrap">
-        <h2 class="section__title">Spritzes</h2>
-        <p class="section__tag">Light, bubbly, and refreshing</p>
-        <ul class="cards" data-section="Spritzes"></ul>
-      </div>
-    </section>
-  </main>
-
-  <!-- Surprise me CTA -->
-  <div class="surprise-wrap">
-    <div class="wrap">
-      <button id="surprise-btn" class="surprise-btn" type="button">
-        🎲 Surprise me
-      </button>
-    </div>
-  </div>
-
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Wes Spangler</p>
-  </footer>
-
-  <script src="app.js"></script>
-
-  <!-- REQUIRED: Redirect logic for Netlify Identity -->
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
+  <!-- CMS Script -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
