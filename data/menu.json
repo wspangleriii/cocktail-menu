@@ -277,12 +277,6 @@
       "spirit": "Whiskey"
     },
     {
-      "ingredients": "1 1/2 oz gin • 1 1/2 ounces sweet vermouth • 1/4 ounce Luxardo maraschino liqueur • 2 dashes Angostura bitters",
-      "name": "Martinez",
-      "section": "Elegant & Aromatic",
-      "spirit": "Gin"
-    },
-    {
       "section": "Deep Cuts & Bartender Picks",
       "name": "Midnight Stroll",
       "ingredients": "1½ oz rye • ¾ oz Campari • ½ oz Amaro Ramazzotti • ¼ oz dry curaçao • 1 dash Peychaud’s",
@@ -323,6 +317,12 @@
       "name": "Select Spritz",
       "ingredients": "2 oz Select • 3 oz Prosecco • 1 oz soda",
       "spirit": "Aperitif"
+    },
+    {
+      "ingredients": "1 1/2 oz gin • 1 1/2 ounces sweet vermouth • 1/4 ounce Luxardo maraschino liqueur • 2 dashes Angostura bitters",
+      "name": "Martinez",
+      "section": "Elegant & Aromatic",
+      "spirit": "Gin"
     }
   ]
 }
