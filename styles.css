@@ -163,4 +163,3 @@ details[open] .card__body { max-height:200px; opacity:1; margin-top:6px; }
 .card.surprise-highlight {
   animation: surpriseGlow 1500ms ease-out;
 }
-

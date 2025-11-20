@@ -1,14 +1,45 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cocktail Menu Manager</title>
-  <!-- Identity Widget for login -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
-  <!-- CMS Script -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-</body>
-</html>
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "data"
+    label: "Menu Data"
+    files:
+      - name: "menu"
+        label: "Cocktail Menu"
+        file: "data/menu.json"
+        fields:
+          - name: "items"
+            label: "Cocktails"
+            widget: "list"
+            fields:
+              - { label: "Cocktail Name", name: "name", widget: "string" }
+              - label: "Section"
+                name: "section"
+                widget: "select"
+                options:
+                  - "Bright & Citrus-Driven"
+                  - "Elegant & Aromatic"
+                  - "Smooth & Spirit-Forward"
+                  - "Bold & Bitter"
+                  - "Tropical & Escapist"
+                  - "Deep Cuts & Bartender Picks"
+                  - "Spritzes"
+              - { label: "Ingredients", name: "ingredients", widget: "string" }
+              - label: "Primary Spirit"
+                name: "spirit"
+                widget: "select"
+                options:
+                  - "Gin"
+                  - "Tequila"
+                  - "Whiskey"
+                  - "Rum"
+                  - "Vodka"
+                  - "Amaro"
+                  - "Liqueur"
+                  - "Aperitif"
+                  - "Other"

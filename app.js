@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("./data/menu.json")
     .then((r) => r.json())
     .then((data) => {
-      // UPDATED: access the array inside the 'items' key
+      // ACCESSING THE ITEMS ARRAY CORRECTLY
       const menu = data.items;
       
       renderSections(menu);
