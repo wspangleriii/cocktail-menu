@@ -17,8 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("./data/menu.json")
     .then((r) => r.json())
     .then((data) => {
-      renderSections(data);
-      renderFilterControls(data);
+      // UPDATED: access the array inside the 'items' key
+      const menu = data.items;
+      
+      renderSections(menu);
+      renderFilterControls(menu);
       setupRevealObserver();
       setupSectionParallax();
       setupSurpriseButton();
@@ -183,7 +186,6 @@ function setupSectionParallax() {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 }
-
 
 /* Surprise-me: pick a random visible card, open + highlight it */
 function setupSurpriseButton() {
