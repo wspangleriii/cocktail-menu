@@ -5,34 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wes’s Cocktail Menu</title>
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- REQUIRED: Netlify Identity Widget (Must be in head to catch the token URL) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
 
   <!-- HERO -->
-<header class="hero">
-  <div class="wrap">
-    <h1 class="hero__title">Wes’s Cocktail Menu</h1>
+  <header class="hero">
+    <div class="wrap">
+      <h1 class="hero__title">Wes’s Cocktail Menu</h1>
 
-    <!-- Section jump chips -->
-    <nav class="hero__jump">
-      <a class="chip" href="#bright">Bright &amp; Citrus-Driven</a>
-      <a class="chip" href="#aromatic">Elegant &amp; Aromatic</a>
-      <a class="chip" href="#spirit">Smooth &amp; Spirit-Forward</a>
-      <a class="chip" href="#bitter">Bold &amp; Bitter</a>
-      <a class="chip" href="#tropical">Tropical &amp; Escapist</a>
-      <a class="chip" href="#deep">Deep Cuts &amp; Bartender Picks</a>
-      <a class="chip" href="#spritzes">Spritzes</a>
-    </nav>
+      <!-- Section jump chips -->
+      <nav class="hero__jump">
+        <a class="chip" href="#bright">Bright &amp; Citrus-Driven</a>
+        <a class="chip" href="#aromatic">Elegant &amp; Aromatic</a>
+        <a class="chip" href="#spirit">Smooth &amp; Spirit-Forward</a>
+        <a class="chip" href="#bitter">Bold &amp; Bitter</a>
+        <a class="chip" href="#tropical">Tropical &amp; Escapist</a>
+        <a class="chip" href="#deep">Deep Cuts &amp; Bartender Picks</a>
+        <a class="chip" href="#spritzes">Spritzes</a>
+      </nav>
 
-    <!-- Spirit Filter -->
-    <div class="hero__filter-row">
-      <label for="spirit-filter" class="filter-label">Filter by Spirit:</label>
-      <select id="spirit-filter" class="filter-select"></select>
+      <!-- Spirit Filter -->
+      <div class="hero__filter-row">
+        <label for="spirit-filter" class="filter-label">Filter by Spirit:</label>
+        <select id="spirit-filter" class="filter-select">
+          <!-- Options populated by JS -->
+        </select>
+      </div>
     </div>
-  </div>
-</header>
-
+  </header>
 
   <main id="main">
     <!-- Bright -->
@@ -108,12 +112,24 @@
     </div>
   </div>
 
-
-
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> Wes Spangler</p>
   </footer>
 
+  <!-- Main App Logic -->
   <script src="app.js"></script>
+
+  <!-- REQUIRED: Redirect logic for Netlify Identity -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
