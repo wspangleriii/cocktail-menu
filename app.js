@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("./data/menu.json")
     .then((r) => r.json())
     .then((data) => {
-      // ACCESSING THE ITEMS ARRAY CORRECTLY
-      const menu = data.items;
+      // NEW: Filter out any item marked as "hidden"
+      const menu = data.items.filter(item => !item.hidden);
       
       renderSections(menu);
       renderFilterControls(menu);

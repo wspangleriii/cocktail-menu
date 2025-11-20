@@ -43,3 +43,5 @@ collections:
                   - "Liqueur"
                   - "Aperitif"
                   - "Other"
+              # NEW FIELD: The Toggle Switch
+              - { label: "Hide from Menu (Out of Stock)", name: "hidden", widget: "boolean", default: false, required: false }
