@@ -46,13 +46,15 @@
       "section": "Bright & Citrus-Driven",
       "name": "Tequila Daisy",
       "ingredients": "1½ oz blanco tequila • ½ oz Cointreau • ½ oz lemon juice • ¼ oz grenadine • soda water",
-      "spirit": "Tequila"
+      "spirit": "Tequila",
+      "hidden": true
     },
     {
       "section": "Bright & Citrus-Driven",
       "name": "Gold Rush",
       "ingredients": "2 oz bourbon • ¾ oz lemon juice • ¾ oz honey syrup",
-      "spirit": "Whiskey"
+      "spirit": "Whiskey",
+      "hidden": true
     },
     {
       "section": "Elegant & Aromatic",
@@ -250,7 +252,8 @@
       "section": "Tropical & Escapist",
       "name": "Sweet Liberty’s Piña Colada",
       "ingredients": "1½ oz rum blend • 1 oz pineapple juice • 3 oz coco mix • 2 whole coffee beans • 1 pineapple chunk • ¼ oz Pedro Ximénez sherry",
-      "spirit": "Rum"
+      "spirit": "Rum",
+      "hidden": true
     },
     {
       "section": "Deep Cuts & Bartender Picks",
