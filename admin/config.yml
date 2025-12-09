@@ -22,6 +22,7 @@ collections:
                 name: "section"
                 widget: "select"
                 options:
+                  - "🎄 Holiday Specials"
                   - "Bright & Citrus-Driven"
                   - "Elegant & Aromatic"
                   - "Smooth & Spirit-Forward"
@@ -43,5 +44,4 @@ collections:
                   - "Liqueur"
                   - "Aperitif"
                   - "Other"
-              # NEW FIELD: The Toggle Switch
               - { label: "Hide from Menu (Out of Stock)", name: "hidden", widget: "boolean", default: false, required: false }

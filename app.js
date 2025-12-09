@@ -32,15 +32,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* Render menu sections */
 function renderSections(menu) {
+  // 1. Separate Holiday Specials from the rest
+  const holidayItems = menu.filter(item => item.section === "🎄 Holiday Specials");
+  const standardItems = menu.filter(item => item.section !== "🎄 Holiday Specials");
+
+  // 2. Render Holiday Section (if exists)
+  const holidayContainer = document.getElementById("holiday-section");
+  const holidayList = document.getElementById("holiday-cards");
+  
+  if (holidayItems.length > 0 && holidayContainer && holidayList) {
+    holidayContainer.style.display = "block"; // Show the container
+    holidayList.innerHTML = ""; // Clear existing
+    holidayItems.forEach((item, idx) => {
+      const node = cardNode(item, idx);
+      node.classList.add("is-holiday");
+      holidayList.appendChild(node);
+    });
+  }
+
+  // 3. Render Standard Sections
   const lists = document.querySelectorAll(".cards[data-section]");
-  const itemsBySection = groupBy(menu, (d) => d.section);
+  const itemsBySection = groupBy(standardItems, (d) => d.section);
 
   lists.forEach((ul) => {
     const sectionName = ul.getAttribute("data-section");
     const items = itemsBySection[sectionName] || [];
+    ul.innerHTML = ""; // Clear existing to prevent duplicates
     items.forEach((item, idx) => ul.appendChild(cardNode(item, idx)));
   });
 }
+
 function groupBy(arr, keyFn) {
   return arr.reduce((acc, item) => {
     const k = keyFn(item);
@@ -116,6 +137,8 @@ function filterCardsBySpirit(spirit) {
   const allCards = document.querySelectorAll(".card");
   const sections = document.querySelectorAll(".section");
   allCards.forEach((card) => {
+    // Always show holiday cards, ignore filters for them if desired
+    // Or filter them too. Currently, filtering applies to ALL cards including holiday ones.
     const show = spirit === "All" || card.dataset.spirit === spirit;
     card.classList.toggle("is-hidden", !show);
   });

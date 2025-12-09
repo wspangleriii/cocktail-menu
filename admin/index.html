@@ -5,132 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cocktail Menu Manager</title>
   
-  <!-- Identity Widget -->
+  <!-- Identity Widget (Required for Login) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   
-  <!-- THEME V2: Polished & Glitch-Free -->
+  <!-- CUSTOM THEME: NUCLEAR POLISH -->
   <style>
-    /* 1. CORE VARIABLES */
+    /* 1. FORCE BRAND FONTS */
     @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
     :root {
-      --font-sans: "Atkinson Hyperlegible", sans-serif;
-      --bg-color: #f0f2f5; /* Softer gray */
-      --card-bg: #ffffff;
-      --primary: #111;
-      --radius: 12px;
+      --font: "Atkinson Hyperlegible", sans-serif;
+      --bg: #f5f7fa;
+      --white: #ffffff;
+      --black: #111111;
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
 
-    /* 2. GLOBAL RESET */
     body, .nc-app-root {
-      font-family: var(--font-sans) !important;
-      background-color: var(--bg-color) !important;
+      font-family: var(--font) !important;
+      background-color: var(--bg) !important;
     }
 
-    /* 3. APP HEADER (The very top bar) */
+    /* 2. THE TOP HEADER */
     header {
-      background: #fff !important;
-      border-bottom: 1px solid #e1e4e8 !important;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02) !important;
+      background-color: var(--white) !important;
+      border-bottom: 1px solid var(--border) !important;
+      height: 64px !important;
+      box-shadow: var(--shadow) !important;
+      z-index: 100 !important;
     }
-
-    /* 4. COLLECTION HEADER (The "53 cocktails" bar) */
-    /* This removes the ugly gray bar and makes it clean */
+    
+    /* 3. THE COLLECTION BAR (Remove Gray) */
     div[class*="CollectionTop"] {
       background: transparent !important;
       border: none !important;
-      padding: 20px 0 !important;
-      margin-bottom: 0 !important;
+      padding: 24px 0 !important;
     }
     
-    /* The "Add Cocktails" Button */
+    /* "Add Cocktails" Button */
     a[class*="CollectionTopAction"] {
-      background-color: var(--primary) !important;
-      color: #fff !important;
-      border-radius: 8px !important;
+      background-color: var(--black) !important;
+      color: var(--white) !important;
+      border-radius: 99px !important;
+      padding: 10px 24px !important;
       font-weight: 700 !important;
-      padding: 8px 16px !important;
       text-transform: none !important;
+      box-shadow: var(--shadow) !important;
     }
 
-    /* 5. THE COCKTAIL CARDS (List Items) */
-    /* The main white box for each drink */
-    div[class*="ListItem-"] {
-      background: var(--card-bg) !important;
-      border: 1px solid #e1e4e8 !important;
-      border-radius: var(--radius) !important;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.02) !important;
-      margin-bottom: 16px !important;
+    /* 4. THE COCKTAIL CARDS (List Items) */
+    a[class*="ListItemLink"] {
+      background: var(--white) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: 12px !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+      margin-bottom: 12px !important;
+      padding: 16px !important;
+      height: auto !important;
+      display: flex !important;
+      align-items: center !important;
     }
     
-    /* The Drag Handle (The "=" icon) - Make it subtle */
-    div[class*="ListItemDragHandle"] {
-      background: transparent !important;
-      color: #ccc !important;
-    }
-
-    /* 6. INPUTS & DROPDOWNS (Fixing the glitch) */
-    /* We style the CONTAINER, not the raw input, to avoid breaking dropdowns */
-    div[class*="WidgetControl"] {
-      margin-bottom: 16px !important;
-    }
-
-    /* Standard Text Inputs */
-    input[type="text"], textarea {
-      background: #f9fafb !important;
-      border: 1px solid #e1e4e8 !important;
-      border-radius: 8px !important;
-      padding: 12px !important;
+    /* Text inside cards */
+    a[class*="ListItemLink"] span {
+      font-weight: 700 !important;
       font-size: 16px !important;
-      color: #111 !important;
-      width: 100% !important;
-      box-shadow: none !important;
-      transition: all 0.2s ease;
-    }
-    input[type="text"]:focus, textarea:focus {
-      background: #fff !important;
-      border-color: var(--primary) !important;
-      box-shadow: 0 0 0 3px rgba(0,0,0,0.05) !important;
+      color: var(--black) !important;
     }
 
-    /* FIX: Dropdowns (Selects) */
-    /* This targets the React-Select wrapper to make it match */
-    div[class*="react-select__control"] {
-      background-color: #f9fafb !important;
-      border-color: #e1e4e8 !important;
-      border-radius: 8px !important;
-      min-height: 48px !important; /* Taller for touch */
+    /* 5. THE EDITING FORM (Clean Inputs) */
+    div[class*="WidgetControl"] {
+      margin-bottom: 20px !important;
     }
-
-    /* 7. LABELS */
+    
+    /* Labels */
     label {
-      display: block !important;
-      font-size: 0.75rem !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.08em !important;
+      letter-spacing: 0.05em !important;
       font-weight: 800 !important;
-      color: #6b7280 !important;
+      font-size: 11px !important;
+      color: #64748b !important;
       margin-bottom: 8px !important;
+      display: block !important;
     }
 
-    /* 8. PUBLISH BUTTON */
+    /* Inputs */
+    input[type="text"], textarea, select {
+      background: var(--white) !important;
+      border: 1px solid #cbd5e1 !important;
+      border-radius: 8px !important;
+      padding: 14px !important;
+      font-size: 16px !important;
+      color: var(--black) !important;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+      width: 100% !important;
+    }
+    
+    /* Focus State */
+    input:focus, textarea:focus {
+      border-color: var(--black) !important;
+      outline: none !important;
+      box-shadow: 0 0 0 3px rgba(0,0,0,0.1) !important;
+    }
+    
+    /* 6. DROPDOWN FIXES */
+    div[class*="react-select__control"] {
+      border-color: #cbd5e1 !important;
+      border-radius: 8px !important;
+      min-height: 48px !important;
+      box-shadow: none !important;
+      background-color: var(--white) !important;
+    }
+    
+    /* 7. PUBLISH BUTTON */
     button[class*="PublishButton"] {
-      background-color: var(--primary) !important;
-      color: #fff !important;
+      background-color: var(--black) !important;
+      color: var(--white) !important;
       border-radius: 99px !important;
       font-weight: 700 !important;
       padding: 0 24px !important;
     }
-    
-    /* 9. TOGGLE SWITCH (Hide from menu) */
-    /* Make the toggle look nicer */
-    div[class*="Toggle"] {
-      transform: scale(1.2);
-      transform-origin: left;
-    }
   </style>
 </head>
 <body>
+  <!-- Decap CMS Script -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
