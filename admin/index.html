@@ -8,99 +8,129 @@
   <!-- Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   
-  <!-- CUSTOM ADMIN THEME (INLINED) -->
+  <!-- THEME V2: Polished & Glitch-Free -->
   <style>
-    /* 1. FONTS & BASICS */
+    /* 1. CORE VARIABLES */
     @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
     :root {
       --font-sans: "Atkinson Hyperlegible", sans-serif;
-      --bg-color: #f7f7f7;
-      --card-bg: #fff;
+      --bg-color: #f0f2f5; /* Softer gray */
+      --card-bg: #ffffff;
+      --primary: #111;
       --radius: 12px;
-      --shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
+    /* 2. GLOBAL RESET */
     body, .nc-app-root {
       font-family: var(--font-sans) !important;
       background-color: var(--bg-color) !important;
     }
 
-    /* 2. HEADER */
+    /* 3. APP HEADER (The very top bar) */
     header {
-      background-color: #fff !important;
-      box-shadow: var(--shadow) !important;
-      border-bottom: none !important;
+      background: #fff !important;
+      border-bottom: 1px solid #e1e4e8 !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02) !important;
     }
 
-    /* 3. COCKTAIL CARDS (The List Items) */
-    /* This targets the gray bars you saw in the screenshot */
+    /* 4. COLLECTION HEADER (The "53 cocktails" bar) */
+    /* This removes the ugly gray bar and makes it clean */
+    div[class*="CollectionTop"] {
+      background: transparent !important;
+      border: none !important;
+      padding: 20px 0 !important;
+      margin-bottom: 0 !important;
+    }
+    
+    /* The "Add Cocktails" Button */
+    a[class*="CollectionTopAction"] {
+      background-color: var(--primary) !important;
+      color: #fff !important;
+      border-radius: 8px !important;
+      font-weight: 700 !important;
+      padding: 8px 16px !important;
+      text-transform: none !important;
+    }
+
+    /* 5. THE COCKTAIL CARDS (List Items) */
+    /* The main white box for each drink */
     div[class*="ListItem-"] {
       background: var(--card-bg) !important;
-      border: 1px solid #e3e6ea !important;
+      border: 1px solid #e1e4e8 !important;
       border-radius: var(--radius) !important;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.03) !important;
-      margin-bottom: 10px !important;
-      transition: transform 0.1s ease;
-    }
-    div[class*="ListItem-"]:hover {
-      border-color: #ccc !important;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02) !important;
+      margin-bottom: 16px !important;
     }
     
-    /* The bar top (summary) */
-    div[class*="ListItemTopBar"] {
+    /* The Drag Handle (The "=" icon) - Make it subtle */
+    div[class*="ListItemDragHandle"] {
       background: transparent !important;
-      padding: 12px !important;
-    }
-    
-    /* Make the text bold */
-    button[class*="ListItemButton"] {
-      font-weight: 700 !important;
-      font-size: 1.1rem !important;
-      color: #111 !important;
+      color: #ccc !important;
     }
 
-    /* 4. INPUTS & FORM */
-    input, textarea, select {
-      background: #fff !important;
-      border: 1px solid #ccc !important;
+    /* 6. INPUTS & DROPDOWNS (Fixing the glitch) */
+    /* We style the CONTAINER, not the raw input, to avoid breaking dropdowns */
+    div[class*="WidgetControl"] {
+      margin-bottom: 16px !important;
+    }
+
+    /* Standard Text Inputs */
+    input[type="text"], textarea {
+      background: #f9fafb !important;
+      border: 1px solid #e1e4e8 !important;
       border-radius: 8px !important;
       padding: 12px !important;
       font-size: 16px !important;
+      color: #111 !important;
+      width: 100% !important;
       box-shadow: none !important;
+      transition: all 0.2s ease;
     }
-    input:focus, textarea:focus, select:focus {
-      border-color: #111 !important;
-      box-shadow: 0 0 0 3px rgba(0,0,0,0.1) !important;
-    }
-    
-    label {
-      text-transform: uppercase !important;
-      font-size: 0.75rem !important;
-      letter-spacing: 1px !important;
-      font-weight: 800 !important;
-      color: #555 !important;
-      margin-bottom: 5px !important;
+    input[type="text"]:focus, textarea:focus {
+      background: #fff !important;
+      border-color: var(--primary) !important;
+      box-shadow: 0 0 0 3px rgba(0,0,0,0.05) !important;
     }
 
-    /* 5. PUBLISH BUTTON */
+    /* FIX: Dropdowns (Selects) */
+    /* This targets the React-Select wrapper to make it match */
+    div[class*="react-select__control"] {
+      background-color: #f9fafb !important;
+      border-color: #e1e4e8 !important;
+      border-radius: 8px !important;
+      min-height: 48px !important; /* Taller for touch */
+    }
+
+    /* 7. LABELS */
+    label {
+      display: block !important;
+      font-size: 0.75rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      font-weight: 800 !important;
+      color: #6b7280 !important;
+      margin-bottom: 8px !important;
+    }
+
+    /* 8. PUBLISH BUTTON */
     button[class*="PublishButton"] {
-      background-color: #111 !important;
+      background-color: var(--primary) !important;
       color: #fff !important;
       border-radius: 99px !important;
-      padding: 0 25px !important;
-      font-weight: 800 !important;
+      font-weight: 700 !important;
+      padding: 0 24px !important;
     }
     
-    /* 6. HIDE PREVIEW PANE (Optional - gives more space on mobile) */
-    @media (max-width: 900px) {
-      div[class*="EditorContainer"] { flex-direction: column !important; }
-      div[class*="EditorPreviewPane"] { display: none !important; }
+    /* 9. TOGGLE SWITCH (Hide from menu) */
+    /* Make the toggle look nicer */
+    div[class*="Toggle"] {
+      transform: scale(1.2);
+      transform-origin: left;
     }
   </style>
 </head>
 <body>
-  <!-- Decap CMS Script -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
