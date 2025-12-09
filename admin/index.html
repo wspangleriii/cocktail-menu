@@ -5,14 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cocktail Menu Manager</title>
   
-  <!-- Identity Widget for handling logins -->
+  <!-- Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   
-  <!-- LOAD CUSTOM ADMIN THEME -->
-  <link rel="stylesheet" href="admin.css" />
+  <!-- CUSTOM ADMIN THEME (INLINED) -->
+  <style>
+    /* 1. FONTS & BASICS */
+    @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+    :root {
+      --font-sans: "Atkinson Hyperlegible", sans-serif;
+      --bg-color: #f7f7f7;
+      --card-bg: #fff;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    body, .nc-app-root {
+      font-family: var(--font-sans) !important;
+      background-color: var(--bg-color) !important;
+    }
+
+    /* 2. HEADER */
+    header {
+      background-color: #fff !important;
+      box-shadow: var(--shadow) !important;
+      border-bottom: none !important;
+    }
+
+    /* 3. COCKTAIL CARDS (The List Items) */
+    /* This targets the gray bars you saw in the screenshot */
+    div[class*="ListItem-"] {
+      background: var(--card-bg) !important;
+      border: 1px solid #e3e6ea !important;
+      border-radius: var(--radius) !important;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03) !important;
+      margin-bottom: 10px !important;
+      transition: transform 0.1s ease;
+    }
+    div[class*="ListItem-"]:hover {
+      border-color: #ccc !important;
+    }
+    
+    /* The bar top (summary) */
+    div[class*="ListItemTopBar"] {
+      background: transparent !important;
+      padding: 12px !important;
+    }
+    
+    /* Make the text bold */
+    button[class*="ListItemButton"] {
+      font-weight: 700 !important;
+      font-size: 1.1rem !important;
+      color: #111 !important;
+    }
+
+    /* 4. INPUTS & FORM */
+    input, textarea, select {
+      background: #fff !important;
+      border: 1px solid #ccc !important;
+      border-radius: 8px !important;
+      padding: 12px !important;
+      font-size: 16px !important;
+      box-shadow: none !important;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: #111 !important;
+      box-shadow: 0 0 0 3px rgba(0,0,0,0.1) !important;
+    }
+    
+    label {
+      text-transform: uppercase !important;
+      font-size: 0.75rem !important;
+      letter-spacing: 1px !important;
+      font-weight: 800 !important;
+      color: #555 !important;
+      margin-bottom: 5px !important;
+    }
+
+    /* 5. PUBLISH BUTTON */
+    button[class*="PublishButton"] {
+      background-color: #111 !important;
+      color: #fff !important;
+      border-radius: 99px !important;
+      padding: 0 25px !important;
+      font-weight: 800 !important;
+    }
+    
+    /* 6. HIDE PREVIEW PANE (Optional - gives more space on mobile) */
+    @media (max-width: 900px) {
+      div[class*="EditorContainer"] { flex-direction: column !important; }
+      div[class*="EditorPreviewPane"] { display: none !important; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <!-- Decap CMS Script -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
