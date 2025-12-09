@@ -1,0 +1,108 @@
+/* admin/admin.css */
+
+/* 1. BRAND FONTS & COLORS */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --font-sans: "Atkinson Hyperlegible", sans-serif;
+  --bg-color: #f7f7f7;
+  --card-bg: #fff;
+  --accent: #111;
+  --text: #333;
+  --radius: 12px;
+}
+
+/* Apply Font to everything */
+body, .nc-app-root {
+  font-family: var(--font-sans) !important;
+  background-color: var(--bg-color) !important;
+}
+
+/* 2. HEADER & SIDEBAR (The Navigation) */
+/* Make top bar white with shadow */
+.css-19h728v-AppHeader, .css-1d3745o-AppHeader {
+  background-color: #fff !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+  border-bottom: none !important;
+}
+/* Make sidebar dark */
+.css-1e6j14c-Sidebar, .css-1j6i94b-Sidebar {
+  background-color: #111 !important;
+}
+.css-1e6j14c-Sidebar a, .css-1j6i94b-Sidebar a {
+  color: #fff !important;
+}
+
+/* 3. COCKTAIL LIST (The Cards) */
+/* This transforms the boring table rows into nice cards */
+.css-83 wr9v-CollectionTop, .css-1l5066h-CollectionTop {
+  padding: 10px 0 !important;
+}
+
+/* The individual rows */
+a[class*="ListItemLink"] {
+  display: block !important;
+  background: var(--card-bg) !important;
+  margin-bottom: 12px !important;
+  border-radius: var(--radius) !important;
+  border: 1px solid #e3e6ea !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02) !important;
+  padding: 16px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+a[class*="ListItemLink"]:active {
+  transform: scale(0.98);
+  background-color: #fafafa !important;
+}
+
+/* Text inside the list */
+a[class*="ListItemLink"] span {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  color: #111 !important;
+}
+
+/* 4. EDITOR VIEW (The Form) */
+/* Make inputs big and touch-friendly */
+input[type="text"], textarea, select {
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  border: 1px solid #ccc !important;
+  font-size: 16px !important; /* Prevents zooming on iPhone */
+  background: #fff !important;
+}
+input[type="text"]:focus, textarea:focus, select:focus {
+  border-color: #111 !important;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.1) !important;
+}
+
+/* Label styling */
+label {
+  font-weight: 700 !important;
+  color: #444 !important;
+  margin-bottom: 6px !important;
+  text-transform: uppercase;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.05em;
+}
+
+/* 5. BUTTONS (Publish, etc) */
+button {
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: none !important;
+}
+/* The main "Publish" button */
+button[class*="PublishButton"] {
+  background-color: #111 !important;
+  color: #fff !important;
+  padding: 12px 24px !important;
+}
+
+/* 6. HIDE CLUTTER ON MOBILE */
+@media (max-width: 768px) {
+  /* Hide the "Workflow" status bars to save space */
+  div[class*="WorkflowList"] { display: none !important; }
+}
