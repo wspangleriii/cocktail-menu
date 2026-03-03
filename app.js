@@ -9,10 +9,29 @@ function isReduced() {
   );
 }
 
+/* Theme toggle */
+function setupThemeToggle() {
+  const btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+  function updateLabel() {
+    const isDark = document.documentElement.dataset.theme === "dark";
+    btn.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+  }
+  updateLabel();
+  btn.addEventListener("click", () => {
+    const isDark = document.documentElement.dataset.theme !== "dark";
+    document.documentElement.dataset.theme = isDark ? "dark" : "light";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    updateLabel();
+  });
+}
+
 /* DOM ready */
 document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  setupThemeToggle();
 
   fetch("./data/menu.json")
     .then((r) => r.json())
