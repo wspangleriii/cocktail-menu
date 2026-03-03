@@ -74,23 +74,26 @@ a { text-decoration: none; color: inherit; }
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.chip:hover { 
-  background:#111; 
-  color:#fff !important; 
-  border-color:#111; 
+.chip:hover {
+  background:#111;
+  color:#fff !important;
+  border-color:#111;
+}
+.chip--active {
+  background: #111;
+  color: #fff !important;
+  border-color: #111;
+}
+.chip--disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
-/* Filter row under chips */
+/* Spirit filter pills row */
 .hero__filter-row {
   margin-top: .5rem;
-  display:flex; justify-content:center; align-items:center; gap:.75rem; flex-wrap:wrap;
+  display:flex; justify-content:center; align-items:center; gap:.5rem; flex-wrap:wrap;
 }
-.filter-label { font-weight:700; color:var(--ink); }
-.filter-select {
-  font:inherit; font-size:1rem; padding:.5em 1em;
-  border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink);
-}
-.filter-select:focus { outline:2px solid var(--ink); outline-offset:2px; }
 
 /* Sections */
 .section { position:relative; padding-block:3rem; }
@@ -136,13 +139,23 @@ details[open] .card__body { max-height:500px; opacity:1; margin-top:6px; }
 .card__ing { border-left:3px solid var(--accent,#111); padding-left:12px; color:var(--muted); }
 
 /* Themes */
-.theme-bright{ --accent:#FFB800; background:#FFF8E1; }
-.theme-aromatic{ --accent:#6C7DFF; background:#F3F6FF; }
-.theme-spirit{ --accent:#A7683A; background:#FFF4EA; }
-.theme-bitter{ --accent:#FF5757; background:#FFEEEC; }
-.theme-tropical{ --accent:#00C2A2; background:#EFFFF7; }
-.theme-deep{ --accent:#8A5CF6; background:#F6F4FF; }
-.theme-spritzes{ --accent:#FF6FAE; background:#FFF3F8; }
+.theme-bright   { --accent:#FFB800; background-color:#FFF8E1; }
+.theme-aromatic { --accent:#6C7DFF; background-color:#F3F6FF; }
+.theme-spirit   { --accent:#A7683A; background-color:#FFF4EA; }
+.theme-bitter   { --accent:#FF5757; background-color:#FFEEEC; }
+.theme-tropical { --accent:#00C2A2; background-color:#EFFFF7; }
+.theme-deep     { --accent:#8A5CF6; background-color:#F6F4FF; }
+.theme-spritzes { --accent:#FF6FAE; background-color:#FFF3F8; }
+
+/* Decorative SVG backgrounds — parallax position driven by JS vars */
+.theme-bright, .theme-aromatic, .theme-spirit, .theme-spritzes {
+  background-repeat: no-repeat;
+  background-position: calc(100% + var(--bg-shift-x, 0px)) calc(-20px + var(--bg-shift-y, 0px));
+}
+.theme-bright   { background-image: url('./assets/citrus.svg');    background-size: 220px; }
+.theme-aromatic { background-image: url('./assets/botanicals.svg'); background-size: 150px; }
+.theme-spirit   { background-image: url('./assets/woodgrain.svg');  background-size: 280px; }
+.theme-spritzes { background-image: url('./assets/bubbles.svg');    background-size: 150px; }
 
 /* HOLIDAY SPECIALS THEME */
 .theme-holiday {
@@ -222,4 +235,46 @@ details[open] .card__body { max-height:500px; opacity:1; margin-top:6px; }
 }
 .card.surprise-highlight {
   animation: surpriseGlow 1500ms ease-out;
+}
+
+/* ── Dark mode ────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #efefef;
+    --muted: #9ba3ac;
+    --bg: #181818;
+    --card-bg: #242424;
+    --line: #383838;
+    --shadow: 0 10px 26px rgba(0,0,0,.5);
+  }
+
+  .hero {
+    background: radial-gradient(1000px 600px at 80% -10%, rgba(60,40,0,.3) 0%, transparent 60%);
+  }
+
+  .chip { background: #2c2c2c; border-color: #444; }
+  .chip:hover, .chip--active {
+    background: #efefef;
+    color: #111 !important;
+    border-color: #efefef;
+  }
+
+  .surprise-btn { background: #2c2c2c; }
+
+  .back-to-top:hover { background: #efefef; color: #111; border-color: #efefef; }
+
+  /* Section backgrounds */
+  .theme-bright   { background-color: #1e1800; }
+  .theme-aromatic { background-color: #101428; }
+  .theme-spirit   { background-color: #1a1008; }
+  .theme-bitter   { background-color: #200808; }
+  .theme-tropical { background-color: #071a14; }
+  .theme-deep     { background-color: #110e20; }
+  .theme-spritzes { background-color: #1e0c16; }
+
+  .theme-holiday {
+    background: #1c0808;
+    border-color: rgba(214, 48, 49, 0.35);
+    box-shadow: 0 8px 20px rgba(0,0,0,.5);
+  }
 }

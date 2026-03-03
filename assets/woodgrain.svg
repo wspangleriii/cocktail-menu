@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" fill="none">
+  <!-- Wavy grain lines -->
+  <path d="M0 18  Q70 12  140 20  Q210 28  280 16"  stroke="#A7683A" stroke-width="1.5" stroke-opacity="0.22" stroke-linecap="round"/>
+  <path d="M0 36  Q75 30  142 39  Q215 48  280 34"  stroke="#A7683A" stroke-width="1.5" stroke-opacity="0.18" stroke-linecap="round"/>
+  <path d="M0 54  Q68 47  138 57  Q208 67  280 52"  stroke="#A7683A" stroke-width="1.5" stroke-opacity="0.22" stroke-linecap="round"/>
+  <path d="M0 72  Q72 65  144 75  Q216 85  280 70"  stroke="#A7683A" stroke-width="1.5" stroke-opacity="0.18" stroke-linecap="round"/>
+  <path d="M0 90  Q70 83  140 92  Q212 101 280 88"  stroke="#A7683A" stroke-width="2"   stroke-opacity="0.22" stroke-linecap="round"/>
+  <path d="M0 108 Q74 101 146 111 Q218 121 280 106" stroke="#A7683A" stroke-width="1.5" stroke-opacity="0.18" stroke-linecap="round"/>
+  <path d="M0 126 Q68 119 138 129 Q210 139 280 124" stroke="#A7683A" stroke-width="1.5" stroke-opacity="0.22" stroke-linecap="round"/>
+  <path d="M0 144 Q72 137 144 147 Q215 157 280 142" stroke="#A7683A" stroke-width="1.5" stroke-opacity="0.18" stroke-linecap="round"/>
+  <path d="M0 162 Q70 155 140 165 Q212 175 280 160" stroke="#A7683A" stroke-width="1.5" stroke-opacity="0.22" stroke-linecap="round"/>
+  <!-- Knot -->
+  <ellipse cx="90" cy="90" rx="25" ry="12" stroke="#A7683A" stroke-width="1.5" stroke-opacity="0.15"/>
+  <ellipse cx="90" cy="90" rx="14" ry="7"  stroke="#A7683A" stroke-width="1"   stroke-opacity="0.12"/>
+</svg>

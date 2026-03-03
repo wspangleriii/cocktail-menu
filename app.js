@@ -120,31 +120,44 @@ function cardNode(item, idx) {
   return li;
 }
 
-/* Filter dropdown */
+/* Filter pills */
 function renderFilterControls(menu) {
-  const select = document.getElementById("spirit-filter");
-  if (!select) return;
+  const container = document.getElementById("spirit-filter");
+  if (!container) return;
   const spirits = ["All", ...new Set(menu.map((i) => i.spirit).filter(Boolean))];
   spirits.forEach((spirit) => {
-    const opt = document.createElement("option");
-    opt.value = spirit;
-    opt.textContent = spirit;
-    select.appendChild(opt);
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "chip spirit-chip" + (spirit === "All" ? " chip--active" : "");
+    btn.textContent = spirit;
+    btn.dataset.spirit = spirit;
+    btn.addEventListener("click", () => filterCardsBySpirit(spirit));
+    container.appendChild(btn);
   });
-  select.addEventListener("change", () => filterCardsBySpirit(select.value));
 }
 function filterCardsBySpirit(spirit) {
+  // Update pill active state
+  document.querySelectorAll(".spirit-chip").forEach((btn) => {
+    btn.classList.toggle("chip--active", btn.dataset.spirit === spirit);
+  });
+
   const allCards = document.querySelectorAll(".card");
   const sections = document.querySelectorAll(".section");
   allCards.forEach((card) => {
-    // Always show holiday cards, ignore filters for them if desired
-    // Or filter them too. Currently, filtering applies to ALL cards including holiday ones.
     const show = spirit === "All" || card.dataset.spirit === spirit;
     card.classList.toggle("is-hidden", !show);
   });
   sections.forEach((section) => {
     const visible = section.querySelectorAll(".card:not(.is-hidden)");
     section.classList.toggle("is-empty", visible.length === 0);
+  });
+
+  // Dim nav chips whose sections are now empty
+  document.querySelectorAll(".hero__jump .chip").forEach((chip) => {
+    const sectionId = chip.getAttribute("href")?.slice(1);
+    if (!sectionId) return;
+    const section = document.getElementById(sectionId);
+    chip.classList.toggle("chip--disabled", !!(section && section.classList.contains("is-empty")));
   });
 }
 
@@ -219,15 +232,10 @@ function setupSurpriseButton() {
     // collect visible cards (respect current filter)
     let cards = [...document.querySelectorAll(".card:not(.is-hidden)")];
 
-    // if none visible (e.g., filtered to an empty state), reset to All
+    // if none visible (e.g., filtered to empty), reset to All
     if (cards.length === 0) {
-      const select = document.getElementById("spirit-filter");
-      if (select) {
-        select.value = "All";
-        // this calls your existing filter logic
-        filterCardsBySpirit("All");
-        cards = [...document.querySelectorAll(".card:not(.is-hidden)")];
-      }
+      filterCardsBySpirit("All");
+      cards = [...document.querySelectorAll(".card:not(.is-hidden)")];
     }
     if (cards.length === 0) return;
 
