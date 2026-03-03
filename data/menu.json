@@ -4,13 +4,15 @@
       "section": "🎄 Holiday Specials",
       "name": "Christmas Spice English Milk Punch",
       "ingredients": "Brandy • Aged Rum • Strong Black Tea • Lemon • Winter Spices • Clarified Milk Wash",
-      "spirit": "Rum"
+      "spirit": "Rum",
+      "hidden": true
     },
     {
       "section": "🎄 Holiday Specials",
       "name": "Mulled Negroni",
       "ingredients": "Gin • Campari • House Mulled Sweet Vermouth",
-      "spirit": "Gin"
+      "spirit": "Gin",
+      "hidden": true
     },
     {
       "section": "Bright & Citrus-Driven",
@@ -89,7 +91,7 @@
     {
       "section": "Elegant & Aromatic",
       "name": "Tequila Espresso Martini",
-      "ingredients": "1½ oz añjo tequila • ½ oz tequila coffee liqueur • 1 oz espresso • ½ oz simple syrup • cinnamon",
+      "ingredients": "1½ oz añejo tequila • ½ oz tequila coffee liqueur • 1 oz espresso • ½ oz simple syrup • cinnamon",
       "spirit": "Tequila"
     },
     {
@@ -101,7 +103,7 @@
     {
       "section": "Smooth & Spirit-Forward",
       "name": "Tequila Old Fashioned",
-      "ingredients": "2 oz añjo tequila • ½ oz demerara syrup • 2 dashes orange bitters • cinnamon",
+      "ingredients": "2 oz añejo tequila • ½ oz demerara syrup • 2 dashes orange bitters • cinnamon",
       "spirit": "Tequila"
     },
     {

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wes’s handcrafted cocktail menu — classics, tropicals, bitters, spritzes, and bartender picks." />
   <title>Wes’s Cocktail Menu</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=’http://www.w3.org/2000/svg’><text y=’32’ font-size=’32’>🍸</text></svg>" />
   <link rel="stylesheet" href="styles.css" />
-  <!-- REQUIRED: Netlify Identity Widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -123,22 +123,10 @@
   </div>
 
   <footer class="site-footer">
+    <a href="#" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
     <p>&copy; <span id="year"></span> Wes Spangler</p>
   </footer>
 
   <script src="app.js"></script>
-
-  <!-- REQUIRED: Redirect logic for Netlify Identity -->
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
 </body>
 </html>
